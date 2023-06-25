@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site de fou wallah leister</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <style>
+        .hide {
+            display: none;
+        }
+
+        #messageContainer {
+            text-align: center;
+            margin-top: 100px;
+            display: none;
+        }
+
+        #message {
+            font-size: 48px;
+            color: red;
+        }
+
+        #additionalMessage {
+            font-size: 24px;
+            color: black;
+            font-family: Calibri, sans-serif;
+            margin-top: 10px;
+        }
+
+        #instagram {
+            font-size: 18px;
+            color: black;
+            font-family: Calibri, sans-serif;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV BAR LAAA-->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">la barre permettan la naviguassion...</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">méson</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="chat.html">chatte</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!--Fin NavBar-->
+    
+    <div class="container text-center mt-5">
+        <button id="quoiButton" class="btn btn-primary btn-lg">Quoi?</button>
+        <div id="messageContainer">
+            <div id="message"></div>
+            <div id="additionalMessage"></div>
+        </div>
+       
+
+        <br>Si tu veux que je te tienne informé sur mon super site ^^ (stp frr j'envoie les mails moi même pitié) :
+        <br> <br>
+
+        <form action="https://send.pageclip.co/btHTxlhidbh0j7mXxzEjhkTiMwbmjC5f/main" class="pageclip-form"
+            method="post">
+            <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="ton prénom :)" />
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="ton mail :p" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#quoiButton").click(function () {
+                hideButton();
+                showMessage("QUOICOUBEHH");
+                showAdditionalMessage("ahahaahh bouffon comme jtai bz");
+            });
+
+            function hideButton() {
+                $("#quoiButton").addClass("hide");
+            }
+
+            function showMessage(text) {
+                $("#message").text(text);
+                $("#messageContainer").fadeIn("slow", function () {
+                    setTimeout(function () {
+                        $("#messageContainer").fadeOut("slow", function () {
+                            resetPage();
+                        });
+                    }, 2000);
+                });
+            }
+
+            function showAdditionalMessage(text) {
+                $("#additionalMessage").text(text);
+            }
+
+            function resetPage() {
+                $("#quoiButton").removeClass("hide");
+                $("#message").text("");
+                $("#additionalMessage").text("");
+            }
+        });
+    </script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+</body>
+
+</html>
